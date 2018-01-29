@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RSS Feed</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js" type="javascript"></script>
+
+</head>
+<body>
+
+	<div id="body">
+		<div id="feedControl">Loading...</div>
+	</div>
+
+	<script type="text/javascript">
+		function load () {
+			var feed ="http://feeds.bbci.co.uk/news/world/rss.xml";
+			new GFdynamicFeedControl(feed, "feedControl");
+		}
+		google.load("feeds", "1");
+		google.setOnLoadCallback(load);
+
+	</script>
+
+</body>
+</html>
